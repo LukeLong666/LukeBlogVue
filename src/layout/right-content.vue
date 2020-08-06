@@ -1,7 +1,7 @@
 <template>
     <div>
-        <div class="header-part">右边内容</div>
-        <div class="content">
+        <div class="content-title-box">右边内容</div>
+        <div class="content-container">
             <router-view></router-view>
         </div>
     </div>
@@ -14,4 +14,11 @@ export default {
 </script>
 
 <style>
+    .content-title-box{
+        border-bottom: solid 1px #e6e6e6;
+        padding: 10px;
+    }
+    .content-container{
+        padding: 10px;
+    }
 </style>
