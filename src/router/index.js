@@ -36,6 +36,7 @@ export const routes = [
         children:[
             {
                 path:'/index',
+                requitreLogin:true,
                 hidden:false,
                 name:'首页',
                 icon:'el-icon-s-home',
@@ -43,9 +44,10 @@ export const routes = [
             },
             {
                 path:'/content',
+                requitreLogin:true,
                 hidden:false,
                 name:'内容',
-                icon:'el-icon-postcard',
+                icon:'el-icon-s-order',
                 component:rightContent,
                 children:[
                     {
@@ -73,16 +75,17 @@ export const routes = [
                         path:'manage-comment',
                         hidden:false,
                         name:'评论管理',
-                        icon:'el-icon-s-fold',
+                        icon:'el-icon-tickets',
                         component:manageComment
                     }
                 ]
             },
             {
                 path:'/user',
+                requitreLogin:true,
                 hidden:false,
                 name:'用户',
-                icon:'el-icon-postcard',
+                icon:'el-icon-s-custom',
                 component:rightContent,
                 children:[
                     {
@@ -118,8 +121,9 @@ export const routes = [
             {
                 path:'/operation',
                 hidden:false,
+                requitreLogin:true,
                 name:'运营',
-                icon:'el-icon-help',
+                icon:'el-icon-video-camera-solid',
                 component:rightContent,
                 children:[
                     {
@@ -141,6 +145,7 @@ export const routes = [
             {
                 path:'/settings',
                 hidden:false,
+                requitreLogin:true,
                 name:'设置',
                 icon:'el-icon-s-tools',
                 component:rightContent,
@@ -155,7 +160,7 @@ export const routes = [
                     {
                         path:'friend-link',
                         name:'友情链接',
-                        icon:'el-icon-postcard',
+                        icon:'el-icon-goblet-square-full',
                         hidden:false,
                         component:friendLink
                     }
@@ -165,7 +170,8 @@ export const routes = [
     },
     {
         path:'/login',
-        component:login
+        component:login,
+        requitreLogin:false
     }
 ]
 

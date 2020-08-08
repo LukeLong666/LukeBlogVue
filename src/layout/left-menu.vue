@@ -1,14 +1,14 @@
 <template>
     <div>
-        <el-menu default-active="0" unique-opened="true" class="el-menu-vertical-demo">
+        <el-menu default-active="0" unique-opened class="el-menu-vertical-demo">
             <template v-for="(item,index) in menuList">
                 <router-link :to="item.path" v-if="!item.children&&!item.hidden" :key="index">
-                    <el-menu-item :index="index">
+                    <el-menu-item :index="index+''">
                         <i :class="item.icon"></i>
                         <span slot="title">{{item.name}}</span>
                     </el-menu-item>
                 </router-link>
-                <el-submenu :key="index" :index="index" v-if="item.children&&!item.hidden">
+                <el-submenu :key="index" :index="index+''" v-if="item.children&&!item.hidden">
                     <template slot="title">
                         <i :class="item.icon"></i>
                         <span>{{item.name}}</span>
@@ -30,7 +30,7 @@
 import { routes } from '../router'
 
 export default {
-    date() {
+    data() {
         return {
             menuList: [
 

@@ -1,0 +1,11 @@
+module.exports={
+    devServer:{
+        proxy:{
+            '/user':{
+                //target:'http://39.99.188.50:8079/lukeblog',
+                target:'http://localhost:8079/lukeblog',
+                changeOrigin:true
+            }
+        }
+    }
+};
