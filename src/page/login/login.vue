@@ -152,7 +152,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 /* 输入框提示信息 */
 .msg{
     margin-left: 10px;

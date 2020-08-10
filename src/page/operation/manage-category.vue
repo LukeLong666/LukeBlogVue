@@ -6,7 +6,7 @@
         </div>
         <div class="category-list-box">
             <el-table :data="categories" stripe style="width:100%" v-loading="loading">
-                <el-table-column prop="id" label="ID" width="200">
+                <el-table-column prop="id" label="ID" width="168">
                 </el-table-column>
                 <el-table-column prop="name" label="分类名称" width="120">
                 </el-table-column>
@@ -49,10 +49,6 @@
                     </template>
                 </el-table-column>
             </el-table>
-        </div>
-
-        <div class="navigation-bar">
-
         </div>
 
         <div class="category-dialog-box">
@@ -344,7 +340,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .category-action-bar {
     margin-top: 12px;
 }
