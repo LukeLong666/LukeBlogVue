@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="container">
         <el-menu default-active="0" unique-opened class="el-menu-vertical-demo">
             <template v-for="(item,index) in menuList">
                 <router-link :to="item.path" v-if="!item.children&&!item.hidden" :key="index">

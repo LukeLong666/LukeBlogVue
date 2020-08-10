@@ -1,6 +1,6 @@
 <template>
-    <div>
-        <div class="content-title-box">右边内容</div>
+    <div class="container">
+        <div class="content-title-box" v-text="$route.name"></div>
         <div class="content-container">
             <router-view></router-view>
         </div>
@@ -9,7 +9,15 @@
 
 <script>
 export default {
+    data(){
 
+    },
+    methods:{
+
+    },
+    mounted(){
+
+    }
 }
 </script>
 
