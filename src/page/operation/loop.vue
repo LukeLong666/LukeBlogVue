@@ -160,7 +160,8 @@ export default {
                 targetUrl:'',
                 order:1,
                 id:''
-            }
+            },
+            editDialogVisible:false
         }
     },
     methods:{
@@ -173,7 +174,13 @@ export default {
             if (this.addLoop.title === '' || this.addLoop.imageUrl === '' || this.addLoop.targetUrl === '') {
                 this.$message({
                     message: '请补全数据',
-                    center: true,
+                    type: 'error'
+                })
+                return;
+            }
+            if(!this.addLoop.targetUrl.startsWith('http://')&&!this.addLoop/this.targetUrl.startsWith('https://')){
+                this.$message({
+                    message: '目标地址格式错误',
                     type: 'error'
                 })
                 return;
@@ -329,7 +336,11 @@ export default {
             if (this.addLoop.targetUrl === '') {
                 this.blur_msg.targetUrl = '目标地址不可以为空'
             } else {
-                this.blur_msg.targetUrl = ''
+                if(!this.addLoop.targetUrl.startsWith('http://')&&!this.addLoop.targetUrl.startsWith('https://')){
+                    this.blur_msg.targetUrl = '目标地址格式错误'
+                }else{
+                    this.blur_msg.targetUrl = ''
+                }
             }
         }
     },
