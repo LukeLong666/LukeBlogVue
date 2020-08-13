@@ -52,7 +52,7 @@
                             <el-tag type="success">正常</el-tag>
                         </div>
                         <div v-if="scope.row.state==='0'">
-                            <el-tag type="danger">不可用</el-tag>
+                            <el-tag type="danger">已封禁</el-tag>
                         </div>
                     </template>
                 </el-table-column>
@@ -129,7 +129,7 @@ export default {
             //数据总数
             size: 1,
             //页面大小
-            pageSize: 2,
+            pageSize: 4,
             loading: false,
             //搜索相关
             userName: '',

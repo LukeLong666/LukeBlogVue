@@ -178,9 +178,9 @@ export default {
                 })
                 return;
             }
-            if(!this.addLoop.targetUrl.startsWith('http://')&&!this.addLoop/this.targetUrl.startsWith('https://')){
+            if(!this.addLoop.targetUrl.startsWith('http://')&&!this.addLoop.targetUrl.startsWith('https://')){
                 this.$message({
-                    message: '目标地址格式错误',
+                    message: '目标链接格式错误,请以 "http://" 或 "https://" 开头',
                     type: 'error'
                 })
                 return;
