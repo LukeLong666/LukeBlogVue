@@ -5,12 +5,16 @@ import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 import leftMenu from './layout/left-menu'
 import topHeader from './layout/top-header'
+import mavonEditor from 'mavon-editor'
+import 'mavon-editor/dist/css/index.css'
 
 const axios = require('axios')
 
 Vue.config.productionTip = false
 Vue.component('leftMenu',leftMenu)
 Vue.component('topHeader',topHeader)
+Vue.use(mavonEditor)
+Vue.use(ElementUI)
 
 //网址拦截
 router.beforeEach((to,from,next)=>{
@@ -49,7 +53,6 @@ router.beforeEach((to,from,next)=>{
     
 })
 
-Vue.use(ElementUI)
 new Vue({
   router,
   render: h => h(App),

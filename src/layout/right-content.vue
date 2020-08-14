@@ -27,6 +27,9 @@ export default {
     .content-title-box{
         border-bottom: solid 1px #e6e6e6;
         padding: 10px;
+        font-size: 20px;
+        line-height: 30px;
+        font-weight: 600;
     }
     .content-container{
         padding: 10px;

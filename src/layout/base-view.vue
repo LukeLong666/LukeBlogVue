@@ -4,7 +4,7 @@
             <el-header id="header">
                 <topHeader></topHeader>
             </el-header>
-            <el-container>
+            <el-container class="main-container">
                 <el-aside id="left-menu" width="220px">
                     <leftMenu></leftMenu>
                 </el-aside>
@@ -23,17 +23,18 @@
 <script>
 export default {
     mounted(){
-        //动态设置侧边菜单高度
-        let leftMenu = document.getElementById("left-menu");
-        let header = document.getElementById("header");
-        if(leftMenu){
-            leftMenu.style.height=(window.innerHeight)-(header.offsetHeight)+"px";
-        }
+        
     }
 }
 </script>
 
 <style>
+.main-container{
+    position: absolute;
+    top: 60px;
+    width: 100%;
+    bottom: 0;
+}
 #left-menu .el-aside{
     border-right: none;
 }

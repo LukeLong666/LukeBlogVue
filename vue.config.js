@@ -9,6 +9,10 @@ module.exports={
             '/admin':{
                 target:baseUrl,
                 changeOrigin:true
+            },
+            '/portal':{
+                target:baseUrl,
+                changeOrigin:true
             }
         }
     }
