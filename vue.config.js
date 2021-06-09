@@ -1,4 +1,4 @@
-const baseUrl = 'http://localhost:8079/lukeblog'
+const baseUrl = 'http://localhost:8079/luke_blog'
 module.exports={
     devServer:{
         proxy:{
